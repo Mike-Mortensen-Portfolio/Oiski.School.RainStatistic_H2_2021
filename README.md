@@ -39,6 +39,8 @@ The Assignment specifies that versioning should be done according to the followi
    - Fixed Crash when the user provides a menuIndex higher than 2 or lower than 1
  - [v1.0.2 - Revision 1](https://github.com/ZhakalenDk/Oiski.School.RainStatistic_H2_2021/releases/tag/v1.0.2)
    - Optimized codebase for better readability
+ - [v2.0.0](https://github.com/ZhakalenDk/Oiski.School.RainStatistic_H2_2021/releases/tag/v2.0.0)
+   - This version intergrates the benefits of the OiskiEngine to handle the process of rendering and user interactions
 
 ## Oiski.School Namespace Collection
 1. [Oiski.School.Library_h1_2020](https://github.com/ZhakalenDk/Oiski.School.Library_H1_2020)
