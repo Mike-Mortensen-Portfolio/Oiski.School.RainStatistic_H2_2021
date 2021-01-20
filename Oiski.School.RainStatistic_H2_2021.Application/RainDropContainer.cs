@@ -72,6 +72,21 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>The average of the values in the <see cref="ValuePool"/></returns>
+        public decimal GetAverage ()
+        {
+            decimal sum = 0;
+            for ( int i = 0; i < ValuePool.Length; i++ )
+            {
+                sum += ValuePool[i];
+            }
+
+            return sum / ValuePool.Length;
+        }
+
+        /// <summary>
         /// Creates a new instance of type <see cref="RainDropContainer"/> where the <paramref name="_poolSize"/> is defined
         /// </summary>
         /// <param name="_poolSize">The size of the raindrop value pool</param>
