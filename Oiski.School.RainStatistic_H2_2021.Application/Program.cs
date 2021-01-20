@@ -15,7 +15,7 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
             }
 
             Console.WriteLine();
-            Console.WriteLine(calc.GetMinimum());
+            Console.WriteLine(calc.GetMaximum());
         }
     }
 }
