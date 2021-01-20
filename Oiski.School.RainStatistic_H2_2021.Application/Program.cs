@@ -130,7 +130,7 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
 
             amountText.OnSelect += (s) =>
             {
-                if ( int.TryParse(amountText.Text, out int _dataAmount) )
+                if ( int.TryParse(amountText.Text, out int _dataAmount) )   //  Create new instance of the container and reset the value counter
                 {
                     container = new RaindropContainer(_dataAmount);
                     valueCounter = 1;
@@ -151,12 +151,12 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
             {
                 amountStatusLabel.Position = new Vector2(amountText.Position.x + amountText.Size.x - 1, amountLabel.Position.y);
 
-                if ( container != null )
+                if ( container != null )    //  Tell the user that an instance of the container exists
                 {
                     amountStatusLabel.Text = "OK";
                     amountStatusLabel.TextColor = new RenderColor(ConsoleColor.Green, ConsoleColor.Black);
                 }
-                else
+                else    // Tell the user that an instance of the container does not exist 
                 {
                     amountStatusLabel.Text = "No Data";
                     amountStatusLabel.TextColor = new RenderColor(ConsoleColor.Red, ConsoleColor.Black);
@@ -200,7 +200,7 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
                         container.ValuePool[valueCounter - 1] = _value;
                     }
 
-                    if ( !OiskiEngine.Input.CanWrite && valueText.Text != string.Empty )
+                    if ( !OiskiEngine.Input.CanWrite && valueText.Text != string.Empty )    //  When exiting the write state of the TextField and the string input is not empty
                     {
                         valueCounter++;
                     }
@@ -217,13 +217,13 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
             {
                 valueStatusLabel.Position = new Vector2(valueText.Position.x + valueText.Size.x - 1, valueLabel.Position.y);
 
-                if ( container != null && valueCounter > container.ValuePool.Length )
+                if ( container != null && valueCounter > container.ValuePool.Length )   //    Tell the user that all data has been collected
                 {
                     valueStatusLabel.Text = "All Data Collected";
                     valueLabel.Text = $"Value {container.ValuePool.Length}";
                     valueStatusLabel.TextColor = new RenderColor(ConsoleColor.Green, ConsoleColor.Black);
                 }
-                else
+                else    //  Tell the user how many values are yet to be collected
                 {
                     valueStatusLabel.Text = $"{( ( container != null ) ? ( $"{container.ValuePool.Length - valueCounter} Left" ) : ( "No Data" ) )}";
                     valueStatusLabel.TextColor = new RenderColor(ConsoleColor.Red, ConsoleColor.Black);
