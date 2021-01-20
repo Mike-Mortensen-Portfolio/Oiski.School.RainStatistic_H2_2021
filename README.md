@@ -16,12 +16,27 @@ The assignments states that the following criteria:
 
 **Output**
 >Provide a menu from which a user can navigate the programs functions. \
->Print the ´provided values in a table like structure and the `minimum`, `maximum` and `average` values underneath.
+>Print the provided values in a table like structure and the `minimum`, `maximum` and `average` values underneath.
 
 See the [Wiki](https://github.com/ZhakalenDk/Oiski.School.RainStatistic_H2_2021/wiki) for more in depth information about the project.
 
 ## Versioning
-The Assignment specifies that versioning shoudld be done according to the following template: [_Major_].[_Minor_].[_Path_].
+The Assignment specifies that versioning should be done according to the following template: [_Major_].[_Minor_].[_Path_].
+
+### Change Log
+ - [v0.1.0](https://github.com/ZhakalenDk/Oiski.School.RainStatistic_H2_2021/releases/tag/v0.1.0)
+   - Implemented a Container that can store raindrop values
+ - [v0.2.0](https://github.com/ZhakalenDk/Oiski.School.RainStatistic_H2_2021/releases/tag/v0.2.0)
+   - Implemented the ability to find the lowest number in the `ValuePool`
+ - [v0.3.0](https://github.com/ZhakalenDk/Oiski.School.RainStatistic_H2_2021/releases/tag/v0.3.0)
+   - Implemented the ability to find the highest number in the `ValuePool`
+ - [v0.4.0](https://github.com/ZhakalenDk/Oiski.School.RainStatistic_H2_2021/releases/tag/v0.4.0)
+   - Implemented the ability to calculate the average of the values in the `ValuePool`
+ - [v1.0.0](https://github.com/ZhakalenDk/Oiski.School.RainStatistic_H2_2021/releases/tag/v1.0.0)
+   - Implemented basic Menu Navigation
+ - [v1.0.1 - Hotfix 1](https://github.com/ZhakalenDk/Oiski.School.RainStatistic_H2_2021/releases/tag/v1.0.1)
+   - Fixed Crash when entering Result Menu when Container is empty
+   - Fixed Crash when the user provides a menuIndex higher than 2 or lower than 1 
 
 ## Oiski.School Namespace Collection
 1. [Oiski.School.Library_h1_2020](https://github.com/ZhakalenDk/Oiski.School.Library_H1_2020)
