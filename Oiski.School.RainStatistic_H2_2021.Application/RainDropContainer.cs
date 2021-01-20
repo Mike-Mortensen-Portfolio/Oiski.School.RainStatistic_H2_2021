@@ -36,6 +36,24 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>The smallest number in <see cref="ValuePool"/></returns>
+        public decimal GetMinimum ()
+        {
+            decimal min = ValuePool[0];
+            for ( int i = 1; i < ValuePool.Length; i++ )
+            {
+                if ( ValuePool[i] < min )
+                {
+                    min = ValuePool[i];
+                }
+            }
+
+            return min;
+        }
+
+        /// <summary>
         /// Creates a new instance of type <see cref="RainDropContainer"/> where the <paramref name="_poolSize"/> is defined
         /// </summary>
         /// <param name="_poolSize">The size of the raindrop value pool</param>

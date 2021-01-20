@@ -8,18 +8,14 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
         {
             RainDropContainer calc = new RainDropContainer(5);
 
-            decimal[] values = new decimal[2];
-            for ( int i = 0; i < values.Length; i++ )
+            for ( int i = 0; i < calc.ValuePool.Length; i++ )
             {
-                values[i] = i + 1;
+                calc.ValuePool[i] = i + 1;
+                Console.Write(calc.ValuePool[i]);
             }
 
-            calc.AddRange(6, values);
-
-            foreach ( var item in calc.ValuePool )
-            {
-                Console.Write(item);
-            }
+            Console.WriteLine();
+            Console.WriteLine(calc.GetMinimum());
         }
     }
 }
