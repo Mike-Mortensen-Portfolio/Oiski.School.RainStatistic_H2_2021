@@ -15,10 +15,14 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
                 switch ( menuIndex )
                 {
                     case 0: //  Main Menu
-                        Console.WriteLine("Oiski's Raindrop Calc");
-                        Console.WriteLine("1) Type Values");
-                        Console.WriteLine("2) Print Results");
-                        int.TryParse(Console.ReadLine(), out menuIndex);
+                        do
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Oiski's Raindrop Calc");
+                            Console.WriteLine("1) Type Values");
+                            Console.WriteLine("2) Print Results");
+                        } while ( !int.TryParse(Console.ReadLine(), out menuIndex) || ( menuIndex < 1 || menuIndex > 2 ) );
+                        
                         break;
                     case 1: //  Type Values Menu
 
@@ -45,23 +49,33 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
                         break;
 
                     case 2: //  Print Result Menu
-                        Console.WriteLine("|------------------------------------|");
-                        for ( int i = 0; i < container.ValuePool.Length; i++ )
+                        if ( container != null )
                         {
-                            Console.Write(string.Format("{0,20}", $"Value({i + 1}): "));
-                            Console.Write(string.Format("{0,5}", $"{container.ValuePool[i]}\n"));
+                            Console.WriteLine("|------------------------------------|");
+                            for ( int i = 0; i < container.ValuePool.Length; i++ )
+                            {
+                                Console.Write(string.Format("{0,20}", $"Value({i + 1}): "));
+                                Console.Write(string.Format("{0,5}", $"{container.ValuePool[i]}\n"));
+                            }
+                            Console.WriteLine("|------------------------------------|");
+
+                            Console.Write(string.Format("{0,20}", $"Minimum: "));
+                            Console.Write(string.Format("{0,5}", $"{container.GetMinimum()}\n"));
+
+                            Console.Write(string.Format("{0,20}", $"Maximum: "));
+                            Console.Write(string.Format("{0,5}", $"{container.GetMaximum()}\n"));
+
+                            Console.Write(string.Format("{0,20}", $"Average: "));
+                            Console.Write(string.Format("{0,5}", $"{container.GetAverage()}\n"));
+                            Console.WriteLine("|------------------------------------|");
                         }
-                        Console.WriteLine("|------------------------------------|");
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("There are no values in the pool");
+                            Console.ResetColor();
+                        }
 
-                        Console.Write(string.Format("{0,20}", $"Minimum: "));
-                        Console.Write(string.Format("{0,5}", $"{container.GetMinimum()}\n"));
-
-                        Console.Write(string.Format("{0,20}", $"Maximum: "));
-                        Console.Write(string.Format("{0,5}", $"{container.GetMaximum()}\n"));
-
-                        Console.Write(string.Format("{0,20}", $"Average: "));
-                        Console.Write(string.Format("{0,5}", $"{container.GetAverage()}\n"));
-                        Console.WriteLine("|------------------------------------|");
                         Console.Write("Press any key...");
                         Console.Read();
                         menuIndex = 0;
