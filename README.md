@@ -37,7 +37,7 @@ The Assignment specifies that versioning should be done according to the followi
  - [v1.0.1 - Hotfix 1](https://github.com/ZhakalenDk/Oiski.School.RainStatistic_H2_2021/releases/tag/v1.0.1)
    - Fixed Crash when entering Result Menu when Container is empty
    - Fixed Crash when the user provides a menuIndex higher than 2 or lower than 1
- -[v1.0.2 - Revision 1](https://github.com/ZhakalenDk/Oiski.School.RainStatistic_H2_2021/releases/tag/v1.0.2)
+ - [v1.0.2 - Revision 1](https://github.com/ZhakalenDk/Oiski.School.RainStatistic_H2_2021/releases/tag/v1.0.2)
    - Optimized codebase for better readability
 
 ## Oiski.School Namespace Collection
