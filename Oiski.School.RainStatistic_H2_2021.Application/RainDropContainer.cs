@@ -7,7 +7,7 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
     /// <summary>
     /// A container that can store raindrop values collected over time
     /// </summary>
-    public class RainDropContainer
+    public class RaindropContainer
     {
         /// <summary>
         /// The pool of raindrop values
@@ -87,10 +87,10 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
         }
 
         /// <summary>
-        /// Creates a new instance of type <see cref="RainDropContainer"/> where the <paramref name="_poolSize"/> is defined
+        /// Creates a new instance of type <see cref="RaindropContainer"/> where the <paramref name="_poolSize"/> is defined
         /// </summary>
         /// <param name="_poolSize">The size of the raindrop value pool</param>
-        public RainDropContainer (int _poolSize)
+        public RaindropContainer (int _poolSize)
         {
             ValuePool = new decimal[_poolSize];
         }

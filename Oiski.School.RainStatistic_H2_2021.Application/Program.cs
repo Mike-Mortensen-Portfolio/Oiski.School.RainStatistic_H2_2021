@@ -6,7 +6,7 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
     {
         static void Main (string[] args)
         {
-            RainDropContainer container = null;
+            RaindropContainer container = null;
 
             int menuIndex = 0;
             do
@@ -14,6 +14,7 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
                 Console.Clear();
                 switch ( menuIndex )
                 {
+                    #region Main Menu
                     case 0: //  Main Menu
                         do
                         {
@@ -24,6 +25,8 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
                         } while ( !int.TryParse(Console.ReadLine(), out menuIndex) || ( menuIndex < 1 || menuIndex > 2 ) );
                         
                         break;
+                    #endregion
+                    #region Type Values Menu
                     case 1: //  Type Values Menu
 
                         int poolSize;
@@ -32,7 +35,7 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
                             Console.Write("The Amount of Values: ");
                         } while ( !int.TryParse(Console.ReadLine(), out poolSize) );
 
-                        container = new RainDropContainer(poolSize);
+                        container = new RaindropContainer(poolSize);
 
                         for ( int i = 0; i < container.ValuePool.Length; i++ )
                         {
@@ -47,7 +50,8 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
 
                         menuIndex = 0;
                         break;
-
+                    #endregion
+                    #region Print Result Menu
                     case 2: //  Print Result Menu
                         if ( container != null )
                         {
@@ -80,6 +84,7 @@ namespace Oiski.School.RainStatistic_H2_2021.Application
                         Console.Read();
                         menuIndex = 0;
                         break;
+                        #endregion
                 }
             } while ( true );
         }
