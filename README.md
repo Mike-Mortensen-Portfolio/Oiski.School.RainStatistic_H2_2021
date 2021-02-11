@@ -42,6 +42,6 @@ The Assignment specifies that versioning should be done according to the followi
  - [v2.0.0](https://github.com/ZhakalenDk/Oiski.School.RainStatistic_H2_2021/releases/tag/v2.0.0)
    - This version intergrates the benefits of the [OiskiEngine](https://github.com/ZhakalenDk/Oiski.ConsoleTech.Engine) to handle the process of rendering and user interactions
 
-## Oiski.School Namespace Collection
+## [Oiski.School Namespace Collection](https://github.com/Mike-Mortensen-Portfolio)
 1. [Oiski.School.Library_h1_2020](https://github.com/ZhakalenDk/Oiski.School.Library_H1_2020)
 2. [Oiski.School.Bank_H1_2020](https://github.com/ZhakalenDk/Oiski.School.Bank_H1_2020)
